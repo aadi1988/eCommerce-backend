@@ -8,7 +8,10 @@ router.get('/', (req, res) => {
   // be sure to include its associated Product data
   Tag.findAll({include: [{model: Product, as: 'prodtag', attributes:['product_id','product_name','price','stock','category_id']}]}).then(ans => {
     res.json(ans);
-  }) 
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get('/:id', (req, res) => {
@@ -16,7 +19,10 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Product data
   Tag.findAll({include: [{model: Product, as: 'prodtag', attributes:['product_id','product_name','price','stock','category_id']}]}).then(ans => {
     res.json(ans);
-  }) 
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.post('/', (req, res) => {
@@ -26,7 +32,10 @@ router.post('/', (req, res) => {
     tag_name: req.body.tag_name
   }).then(ans => {
     res.json(ans);
-  })
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.put('/:id', (req, res) => {
@@ -40,7 +49,10 @@ router.put('/:id', (req, res) => {
      }
   }).then(ans => {
    res.json(ans);
-  })
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.delete('/:id', (req, res) => {
@@ -51,7 +63,10 @@ router.delete('/:id', (req, res) => {
     }
   }).then(ans => {
        res.json(ans);
-  })
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
