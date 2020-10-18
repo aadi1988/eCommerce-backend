@@ -2,6 +2,7 @@
   [![License](<https://img.shields.io/static/v1?label=License&message=MIT&color=green>)]()
 ## Description
 This is the backend for an ecommerce website with categories of products and tags associated with the products.
+Screencastify link: https://drive.google.com/file/d/1hAmhI9PZqJSU3ZFoK9EOUMhjjsU2gEz5/view
 ## Table of contents
 [Installation](#installation-instructions)  
 [License](#license)  
